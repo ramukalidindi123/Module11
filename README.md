@@ -47,10 +47,11 @@ The dataset contains information on **426,000 used cars** with features includin
 ---
 ## **3️ Data Preparation**
 ### **Cleaning Steps**
-    ** calculated percatnge of missing data for ecah columns and made necessary cleansing decisions
-    **Removed extreme outliers** in `price` (kept only cars between **$500 - $500,000**).  
-    **Imputed missing values** for categorical columns like `condition`, `drive`, and `fuel`.  
-    **Dropped unnecessary columns** ( `VIN`, ' Size' ) that do not impact price.  
+   - **Calculated percatnges of missing data** for each column and made necessary cleansing decisions
+   - **Removed extreme outliers** in `price` (kept only cars between **$500 - $500,000**).  
+  -  **Imputed missing values** for categorical columns like `condition`, `drive`, and `fuel`.  
+   - **Dropped unnecessary columns** ( `VIN`, ' Size' ) that do not impact price.
+   - ** Dropped subset of rows with Blank values
 **Created new features**:
 - **`car_age = 2024 - year`** → Captures depreciation impact.
 - **`manufacturer_location`** → Categorized manufacturers by country (`America, Japan, Germany, etc.`).
@@ -75,9 +76,6 @@ The dataset contains information on **426,000 used cars** with features includin
 ### **🔹 Prerequisites**
 - Python 3.8+
 - Libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`, `sklearn`, `xgboost`
+- Unzip the vehicles CSVfile 
 
-```
 
----
-## **📜 Conclusion**
-This project successfully predicts **used car prices** by analyzing key features such as **condition, mileage, manufacturer, fuel type, and drivetrain**. The insights generated can help **dealerships make data-driven pricing decisions**.
